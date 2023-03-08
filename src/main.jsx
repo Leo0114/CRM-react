@@ -46,8 +46,16 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+try {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
+} catch (error) {
+  console.error(error);
+  ReactDOM.render(
+    <ErrorPage message={`Unexpected error: ${error.message}`} />,
+    document.getElementById("root")
+  );
+}
