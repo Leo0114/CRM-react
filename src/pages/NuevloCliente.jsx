@@ -28,7 +28,7 @@ export async function action({ request }) {
   }
 
   await agregarCliente(datos);
-  return redirect("/");
+  return redirect("/CRM-react");
 }
 
 const NuevloCliente = () => {
@@ -46,7 +46,7 @@ const NuevloCliente = () => {
         <button
           className=" rounded-lg bg-blue-800 text-white px-3 py-1 font-bold uppercase hover:bg-blue-600"
           onClick={() => {
-            navigate("/");
+            navigate("/CRM-react");
           }}
         >
           Volver

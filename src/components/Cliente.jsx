@@ -3,7 +3,7 @@ import { destroyCliente } from "../api/clientes";
 
 export async function action({ params }) {
   await destroyCliente(params.clienteId);
-  return redirect("/");
+  return redirect("/CRM-react");
 }
 
 const Cliente = ({ cliente }) => {
@@ -30,14 +30,14 @@ const Cliente = ({ cliente }) => {
         <button
           type="button"
           className=" text-blue-600 hover:text-blue-800 uppercase font-bold text-xs"
-          onClick={() => navigate(`/clientes/${id}/editar`)}
+          onClick={() => navigate(`/CRM-react/clientes/${id}/editar`)}
         >
           Editar
         </button>
 
         <Form
           method="post"
-          action={`/clientes/${id}/eliminar`}
+          action={`/CRM-react/clientes/${id}/eliminar`}
           onSubmit={(e) => {
             if (!confirm("Deseas eliminar este registro?")) {
               e.preventDefault();

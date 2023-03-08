@@ -12,7 +12,7 @@ const Layout = () => {
         <nav className=" mt-10">
           <Link
             className={`${
-              location.pathname === "/"
+              location.pathname === "/CRM-react"
                 ? "text-blue-300  border-b-8  border-blue-400"
                 : "text-white"
             }
@@ -23,7 +23,7 @@ const Layout = () => {
           </Link>
           <Link
             className={`${
-              location.pathname === "/clientes/nuevo"
+              location.pathname === "/CRM-react/clientes/nuevo"
                 ? "text-blue-300 border-b-8 border-blue-400"
                 : "text-white"
             }
