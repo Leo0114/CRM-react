@@ -17,7 +17,7 @@ const Layout = () => {
                 : "text-white"
             }
             text-2xl block mt-2 hover:text-blue-300 `}
-            to="/"
+            to="/CRM-react"
           >
             Clientes
           </Link>
@@ -28,7 +28,7 @@ const Layout = () => {
                 : "text-white"
             }
               text-2xl block mt-2 hover:text-blue-300 `}
-            to="/clientes/nuevo"
+            to="/CRM-react/clientes/nuevo"
           >
             Nuevo cliente
           </Link>
