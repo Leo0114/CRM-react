@@ -16,7 +16,7 @@ import { action as eliminarClienteAction } from "./components/Cliente";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/CRM-react",
     element: <Layout />,
     children: [
       {
@@ -26,19 +26,22 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: "/clientes/nuevo",
+        path: "/CRM-react/clientes/nuevo",
         element: <NuevloCliente />,
         action: nuevoClienteAction,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/clientes/:clienteId/editar",
+        path: "/CRM-react/clientes/:clienteId/editar",
         element: <EditarCliente />,
         loader: editarClienteLoader,
         action: editarClienteAction,
         errorElement: <ErrorPage />,
       },
-      { path: "/clientes/:clienteId/eliminar", action: eliminarClienteAction },
+      {
+        path: "/CRM-react/clientes/:clienteId/eliminar",
+        action: eliminarClienteAction,
+      },
     ],
   },
 ]);
